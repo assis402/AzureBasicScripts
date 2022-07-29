@@ -1,0 +1,11 @@
+//Create webapp
+az appservice plan create --name azcliplan1000 --resource-group matheus-az204 --is-linux
+
+//Create webapp
+az webapp create --resource-group matheus-az204 --plan azcliplan1000 --name dockerappassis
+
+//Container loggins
+az webapp log config --name dockerappassis --resource-group matheus-az204 --docker-container-logging
+
+//Log strem
+az webapp log tail --name dockerappassis --resource-group matheus-az204
