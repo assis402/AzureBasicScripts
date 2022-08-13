@@ -1,0 +1,10 @@
+//First create the shared access signature
+
+//To create a container
+azcopy make "https://storageaccassis204.blob.core.windows.net/tmp?sv=2021-06-08&ss=bfqt&srt=sco&sp=rwlacp&se=2022-07-31T06:49:43Z&st=2022-07-30T22:49:43Z&spr=https&sig=Qp36jHkvkixzWVsHPouBjT3xyzyDTcfRGf%2B4IlNZ5K0%3D"
+
+//To upload a blob
+azcopy copy storage1.arm.json ""
+
+//Download blob data
+azcopy copy ""

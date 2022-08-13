@@ -3,13 +3,17 @@
     "contentVersion": "1.0.0.0",
     "resources": [
         {
-            "name": "storageaccassisaz",
+            "name": "[concat(copyIndex(),'storageaccassisaz')]",
             "type": "Microsoft.Storage/storageAccounts",
             "apiVersion": "2021-04-01",
             "location": "North Europe",
             "kind": "StorageV2",
             "sku": {
-                "name": "Sandard_LRS"
+                "name": "Standard_LRS"
+            },
+            "copy" : {
+                "name" : "storagecreation",
+                "count" : 3
             }
         }
     ]
